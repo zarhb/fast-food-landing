@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/fast-food-landing/static/css/main.ccfe6e6d.css",
+    "main.js": "/fast-food-landing/static/js/main.42b59655.js",
+    "static/media/header-background.jpg": "/fast-food-landing/static/media/header-background.75e1292fc1693fc8838e.jpg",
+    "static/media/404.png": "/fast-food-landing/static/media/404.2144b2fb01ea7366114c.png",
+    "index.html": "/fast-food-landing/index.html",
+    "main.ccfe6e6d.css.map": "/fast-food-landing/static/css/main.ccfe6e6d.css.map",
+    "main.42b59655.js.map": "/fast-food-landing/static/js/main.42b59655.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ccfe6e6d.css",
+    "static/js/main.42b59655.js"
+  ]
+}
