@@ -1,5 +1,5 @@
 import axios from "axios";
-import {useState, useEffect} from 'react';
+import { useState, useEffect } from "react";
 
 const instance = axios.create({
   baseURL: "https://react-mini-projects-api.classbon.com",
@@ -13,7 +13,7 @@ const useAxios = (axiosParams) => {
     try {
       const result = await instance.request(axiosParams);
       setResponse(result.data);
-      console.log(response);
+      localStorage.setItem("foods", JSON.stringify(result.data));
     } catch (error) {
       setError(error);
     } finally {
@@ -25,7 +25,7 @@ const useAxios = (axiosParams) => {
     fetchData();
   }, [axiosParams.url]);
 
-  return [ response, error, loading ];
+  return [response, error, loading];
 };
 
 export default useAxios;

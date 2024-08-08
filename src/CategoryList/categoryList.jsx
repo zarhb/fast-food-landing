@@ -1,15 +1,17 @@
-import { useEffect, useState } from "react";
 import Loading from "../Loading/loading";
-import SearchBar from "../SearchBar/searchBar";
 import useAxios from "../useAxios";
 
 const CategoryList = ({ filterItems, children }) => {
-
-  const [categories, , loading] =  useAxios({
-    url: '/FoodCategory/categories'
+  const [categories, , loading] = useAxios({
+    url: "/FoodCategory/categories",
   });
 
+  const addToLocalStorage = () => {
+    localStorage.setItem("categories", JSON.stringify(categories));
+  };
+
   const renderContent = () => {
+    addToLocalStorage();
     if (loading) {
       return <Loading theme="primary" />;
     }
